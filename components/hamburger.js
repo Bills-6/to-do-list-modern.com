@@ -15,6 +15,10 @@ document.addEventListener("click", function(isClick) {
 		!openNavButton.contains(isClick.target)
 	) callNav("close");
 });
+closeNavButton.addEventListener("click", () => {
+	callNav("close");
+});
+
 document.addEventListener("keydown", (isKey) => {
 	if (isKey.key === "Escape") callNav("close");
 });

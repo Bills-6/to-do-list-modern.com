@@ -11,7 +11,7 @@
   </head>
 </head>
 <body data-theme="light">
-	<div class="container px-6 mx-auto py-6 bg-blue-300 relative">
+	<div class="container px-6 mx-auto py-6 relative">
 		<h1 class="font-bold text-end text-[1.2rem] mb-5" id="logo">My todo</h1>
 		<div class="hamburger w-[25px] h-[20px] fixed left-[20px] top-[20px] flex flex-col justify-between lg:hidden z-10" id="open-nav-button">
 			<span class="bar h-[2px] bg-zinc-900"></span>
@@ -19,7 +19,7 @@
 			<span class="bar h-[2px] bg-zinc-900"></span>
 		</div>
 
-		<nav class="fixed left-[-200%] top-0 w-[90vw] h-screen bg-zinc-900 z-20 shadow-md shadow-zinc-800 p-3 text-zinc-100 transition-[left]" id="nav-mobile" data-status="close">
+		<nav class="fixed left-[-200%] top-0 w-[90vw] h-screen bg-zinc-900 z-20 shadow-md shadow-zinc-800 p-3 text-zinc-100 transition-[left] lg:hidden" id="nav-mobile" data-status="close">
 			<div class="head flex items-center gap-7">
 				<span class="w-[50px] h-[50px] flex items-center justify-center" id="close-nav-button">
 					<i class="material-symbols-outlined pointer-events-none">arrow_left_alt</i>
@@ -28,7 +28,7 @@
 			</div>
 		</nav>
 
-		<nav class="bg-red-400 h-[50px] rounded-[4rem] flex items-center justify-between px-3">
+		<nav class="bg-gray-200 h-[50px] rounded-[4rem] flex items-center justify-between px-3">
 			<div class="undo-redo flex items-center">
 				<span class="w-[40px] h-[40px] flex items-center justify-center active:scale-[0.9] hover:cursor-pointer" id="undo-button">
 					<i class="material-symbols-outlined pointer-events-none text-gray-700">undo</i>
@@ -38,7 +38,34 @@
 				</span>
 			</div>
 
+			<div class="control flex items-center">
+				<span class="w-[40px] h-[40px] flex items-center justify-center active:scale-[0.9] hover:cursor-pointer" id="deleter-all-button">
+					<i class="material-symbols-outlined pointer-events-none">delete</i>
+				</span>
+				<span class="w-[40px] h-[40px] items-center justify-center active:scale-[0.9] hover:cursor-pointer hidden lg:flex" id="filter-button">
+					<i class="material-symbols-outlined pointer-events-none">filter_alt</i>
+				</span>
+				<span class="w-[40px] h-[40px] flex items-center justify-center active:scale-[0.9] hover:cursor-pointer" id="create-button">
+					<i class="material-symbols-outlined pointer-events-none">add_circle</i>
+				</span>
+			</div>
 		</nav>
+
+
+		<section class="fixed w-[80vw] h-[70vh] top-[150px] left-[50%] translate-x-[-50%] bg-gray-200 z-12 rounded-[2rem] shadow-md shadow-zinc-300 p-5 flex flex-col" id="created-panel">
+			<div class="wrapper-input mb-5">
+				<label class="font-semibold block mb-3" for="name-input">name todo</label>
+				<input class="p-3 bg-gray-300 block w-full rounded-lg" id="name-input" type="text" placeholder="type here..." />
+			</div>
+			<div class="wrapper-input mb-5">
+				<label class="font-semibold block mb-3" for="id-input">Id todo</label>
+				<input class="p-3 bg-gray-300 block w-full rounded-lg" id="id-input" type="text" placeholder="type here..." />
+			</div>
+			<button class="flex items-center justify-center gap-3 bg-gray-300 px-5 py-2 rounded-lg shadow-md shadow-zinc-300 mt-auto hover:bg-gray-400 hover:cursor-pointer active:scale-[0.9]" id="confirm-button">
+				<span class="text-md">Create</span>
+				<i class="material-symbols-outlined scale-[0.9]">call_made</i>
+			</button>
+		</section>
 	</div>
 	<script type="module" src="/components/hamburger.js"></script>
 </body>
