@@ -52,7 +52,7 @@
 		</nav>
 
 
-		<section class="fixed w-[80vw] h-[70vh] top-[150px] left-[50%] translate-x-[-50%] bg-gray-200 z-12 rounded-[2rem] shadow-md shadow-zinc-300 p-5 flex flex-col" id="created-panel">
+		<section class="fixed w-[80vw] h-[70vh] top-[150px] left-[50%] translate-x-[-50%] bg-gray-200 z-12 rounded-[2rem] shadow-md shadow-zinc-300 p-5 hidden flex-col lg:w-[60vw] lg:h-[50vh]" id="created-panel" data-status="close">
 			<div class="wrapper-input mb-5">
 				<label class="font-semibold block mb-3" for="name-input">name todo</label>
 				<input class="p-3 bg-gray-300 block w-full rounded-lg" id="name-input" type="text" placeholder="type here..." />
@@ -61,12 +61,13 @@
 				<label class="font-semibold block mb-3" for="id-input">Id todo</label>
 				<input class="p-3 bg-gray-300 block w-full rounded-lg" id="id-input" type="text" placeholder="type here..." />
 			</div>
-			<button class="flex items-center justify-center gap-3 bg-gray-300 px-5 py-2 rounded-lg shadow-md shadow-zinc-300 mt-auto hover:bg-gray-400 hover:cursor-pointer active:scale-[0.9]" id="confirm-button">
+			<button class="flex items-center justify-center gap-3 bg-gray-300 px-5 py-2 rounded-lg shadow-md shadow-zinc-300 mt-auto hover:bg-gray-400 hover:cursor-pointer active:scale-[0.99] text-gray-700" id="confirm-button">
 				<span class="text-md">Create</span>
 				<i class="material-symbols-outlined scale-[0.9]">call_made</i>
 			</button>
 		</section>
 	</div>
 	<script type="module" src="/components/hamburger.js"></script>
+	<script type="module" src="/components/createdPanel.js"></script>
 </body>
 </html>
